@@ -21,21 +21,11 @@ router.post("/api/workouts", ({ body }, res) => {
     });
 });
 
-router.post("/api/transaction/bulk", ({ body }, res) => {
-  Transaction.insertMany(body)
-    .then(dbTransaction => {
-      res.json(dbTransaction);
-    })
-    .catch(err => {
-      res.status(400).json(err);
-    });
-});
-
-router.get("/api/transaction", (req, res) => {
-  Transaction.find({})
-    .sort({ date: -1 })
-    .then(dbTransaction => {
-      res.json(dbTransaction);
+router.put("/api/workouts", (req, res) => {
+  db.Workout.findByIdAndUpdate(
+    {_id: req.params.id}, {exercises: req.body}
+  ).then(dbWorkout => {
+      res.json(dbWorkout);
     })
     .catch(err => {
       res.status(400).json(err);
