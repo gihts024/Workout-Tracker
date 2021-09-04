@@ -1,3 +1,5 @@
+
+
 function calculateTotalWeight(data) {
   const totals = [];
 
