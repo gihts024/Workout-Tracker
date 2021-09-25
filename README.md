@@ -9,7 +9,6 @@ Allows you to track your workout program
 * [Usage](#usage)  
 * [License](#license)
 * [Contributers](#contributers)
-* [Test Instructions](#test-instructions)
 * [Questions](#questions)
 
 ### Installation ###
@@ -23,10 +22,6 @@ npm run develop
 ## License ##
 
 MIT
-
-## Test Instructions
- 
-none
 
 ## Github ##
 [Github Link](https://github.com/gihts024)
